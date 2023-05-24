@@ -1,13 +1,12 @@
-﻿using System.Security.Claims;
-using Identity.Api.Context;
+﻿using Identity.Api.Context;
 using Identity.Api.Entities;
 using Identity.Api.Models;
 using Identity.Api.Services;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Identity.Api.Controllers;
 
@@ -26,21 +25,21 @@ public class AccountsController : ControllerBase
         _tokenService = tokenService;
     }
 
-    [HttpPost]
+    [HttpPost("register")]
     public async Task<IActionResult> SignUp([FromBody] CreateUserModel userModel)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        if(await _context.Users.AnyAsync(u => u.Username == userModel.Username))
+        if (await _context.Users.AnyAsync(u => u.Username == userModel.Username))
             return BadRequest();
 
         var user = userModel.Adapt<User>();
 
-         _context.Users.Add(user);
-         await _context.SaveChangesAsync();
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
 
-         return Ok();
+        return Ok();
     }
 
     [HttpPost("login")]
@@ -51,7 +50,7 @@ public class AccountsController : ControllerBase
 
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == loginUserModel.UserName);
 
-        if (user == null && user.Password != loginUserModel.UserName)
+        if (user == null && user.Password != loginUserModel.Password)
         {
             return NotFound();
         }
@@ -68,7 +67,7 @@ public class AccountsController : ControllerBase
     {
         var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id  == userId);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
 
         return Ok(user);
     }

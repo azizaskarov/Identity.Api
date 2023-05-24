@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-
-namespace Identity.Api.Midlewares
+﻿namespace Identity.Api.Midlewares
 {
     public class ErrorHandlerMiddleware
     {
@@ -23,14 +19,14 @@ namespace Identity.Api.Midlewares
             }
             catch (Exception e)
             {
-               _logger.LogError(e,"Error");
+                _logger.LogError(e, "Error");
 
-               httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
                 await httpContext.Response.WriteAsJsonAsync(new
                 {
                     Message = e.Message,
-                    
+
                 });
 
             }

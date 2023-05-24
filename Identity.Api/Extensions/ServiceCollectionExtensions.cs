@@ -1,7 +1,7 @@
-﻿using System.Text;
-using Identity.Api.Options;
+﻿using Identity.Api.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Identity.Api.Extensions;
 

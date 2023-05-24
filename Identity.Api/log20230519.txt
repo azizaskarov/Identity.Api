@@ -310,3 +310,156 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2023-05-19 15:47:54.162 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
 2023-05-19 15:47:54.162 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 2.0954ms
+2023-05-19 19:02:56.456 +05:00 [INF] User profile is available. Using 'C:\Users\Aziz Askarov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-19 19:02:56.702 +05:00 [INF] Now listening on: https://localhost:7037
+2023-05-19 19:02:56.702 +05:00 [INF] Now listening on: http://localhost:5035
+2023-05-19 19:02:56.705 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-19 19:02:56.705 +05:00 [INF] Hosting environment: Development
+2023-05-19 19:02:56.705 +05:00 [INF] Content root path: C:\Users\Aziz Askarov\source\repos\Identity.Api\Identity.Api\
+2023-05-19 19:02:58.011 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/index.html - -
+2023-05-19 19:02:58.446 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/index.html - - - 200 - text/html;charset=utf-8 443.1011ms
+2023-05-19 19:02:58.452 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - -
+2023-05-19 19:02:58.459 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.1716ms
+2023-05-19 19:02:58.525 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_vs/browserLink - -
+2023-05-19 19:02:58.629 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 104.2607ms
+2023-05-19 19:02:58.914 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - -
+2023-05-19 19:02:59.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.1335ms
+2023-05-19 19:03:06.953 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:03:07.052 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:03:07.061 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:03:07.061 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 107.7606ms
+2023-05-19 19:04:10.311 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50
+2023-05-19 19:04:10.322 +05:00 [INF] Executing endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:04:10.370 +05:00 [INF] Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Identity.Api.Models.LoginUserModel) on controller Identity.Api.Controllers.AccountsController (Identity.Api).
+2023-05-19 19:04:11.643 +05:00 [INF] Entity Framework Core 6.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2023-05-19 19:04:17.438 +05:00 [INF] Executed DbCommand (700ms) [Parameters=[@__loginUserModel_UserName_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Username]
+FROM [users] AS [u]
+WHERE [u].[Username] = @__loginUserModel_UserName_0
+2023-05-19 19:04:17.752 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-05-19 19:04:17.764 +05:00 [INF] Executed action Identity.Api.Controllers.AccountsController.Login (Identity.Api) in 7384.256ms
+2023-05-19 19:04:17.765 +05:00 [INF] Executed endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:04:17.789 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50 - 200 - text/plain;+charset=utf-8 7478.4703ms
+2023-05-19 19:11:29.548 +05:00 [INF] User profile is available. Using 'C:\Users\Aziz Askarov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-19 19:11:29.780 +05:00 [INF] Now listening on: https://localhost:7037
+2023-05-19 19:11:29.780 +05:00 [INF] Now listening on: http://localhost:5035
+2023-05-19 19:11:29.786 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-19 19:11:29.787 +05:00 [INF] Hosting environment: Development
+2023-05-19 19:11:29.787 +05:00 [INF] Content root path: C:\Users\Aziz Askarov\source\repos\Identity.Api\Identity.Api\
+2023-05-19 19:11:30.138 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/index.html - -
+2023-05-19 19:11:30.552 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/index.html - - - 200 - text/html;charset=utf-8 421.9180ms
+2023-05-19 19:11:30.587 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - -
+2023-05-19 19:11:30.592 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 4.9281ms
+2023-05-19 19:11:30.622 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_vs/browserLink - -
+2023-05-19 19:11:30.655 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.6998ms
+2023-05-19 19:11:30.905 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - -
+2023-05-19 19:11:31.028 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.2216ms
+2023-05-19 19:11:31.530 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/index.html - -
+2023-05-19 19:11:31.537 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/index.html - - - 200 - text/html;charset=utf-8 6.6702ms
+2023-05-19 19:11:31.792 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - -
+2023-05-19 19:11:31.793 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 0.8346ms
+2023-05-19 19:11:31.818 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/_vs/browserLink - -
+2023-05-19 19:11:31.828 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.4923ms
+2023-05-19 19:11:31.952 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - -
+2023-05-19 19:11:31.954 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.6472ms
+2023-05-19 19:11:50.945 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:11:51.714 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:11:51.728 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:11:51.729 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 783.6146ms
+2023-05-19 19:12:06.657 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50
+2023-05-19 19:12:06.672 +05:00 [INF] Executing endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:12:06.768 +05:00 [INF] Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Identity.Api.Models.LoginUserModel) on controller Identity.Api.Controllers.AccountsController (Identity.Api).
+2023-05-19 19:12:09.514 +05:00 [INF] Entity Framework Core 6.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2023-05-19 19:12:17.926 +05:00 [INF] Executed DbCommand (910ms) [Parameters=[@__loginUserModel_UserName_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Username]
+FROM [users] AS [u]
+WHERE [u].[Username] = @__loginUserModel_UserName_0
+2023-05-19 19:12:18.799 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-05-19 19:12:18.819 +05:00 [INF] Executed action Identity.Api.Controllers.AccountsController.Login (Identity.Api) in 12034.712ms
+2023-05-19 19:12:18.822 +05:00 [INF] Executed endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:12:18.843 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50 - 200 - text/plain;+charset=utf-8 12185.4112ms
+2023-05-19 19:13:05.581 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:13:05.583 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:13:05.584 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:13:05.584 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 2.7698ms
+2023-05-19 19:37:38.908 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:37:39.271 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-05-19 19:37:39.406 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-05-19 19:37:39.411 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:37:39.421 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:37:39.425 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 525.4407ms
+2023-05-19 19:37:46.153 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50
+2023-05-19 19:37:46.158 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-05-19 19:37:46.158 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-05-19 19:37:46.159 +05:00 [INF] Executing endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:37:46.186 +05:00 [INF] Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Identity.Api.Models.LoginUserModel) on controller Identity.Api.Controllers.AccountsController (Identity.Api).
+2023-05-19 19:37:46.292 +05:00 [INF] Entity Framework Core 6.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2023-05-19 19:37:49.784 +05:00 [INF] Executed DbCommand (608ms) [Parameters=[@__loginUserModel_UserName_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Username]
+FROM [users] AS [u]
+WHERE [u].[Username] = @__loginUserModel_UserName_0
+2023-05-19 19:37:49.791 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-05-19 19:37:49.792 +05:00 [INF] Executed action Identity.Api.Controllers.AccountsController.Login (Identity.Api) in 3605.7867ms
+2023-05-19 19:37:49.792 +05:00 [INF] Executed endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:37:49.793 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50 - 200 - text/plain;+charset=utf-8 3640.4876ms
+2023-05-19 19:37:53.715 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:37:53.716 +05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-05-19 19:37:53.716 +05:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-05-19 19:37:53.716 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:37:53.716 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:37:53.716 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 1.3155ms
+2023-05-19 19:39:03.291 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50
+2023-05-19 19:39:03.292 +05:00 [INF] Executing endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:39:03.292 +05:00 [INF] Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Identity.Api.Models.LoginUserModel) on controller Identity.Api.Controllers.AccountsController (Identity.Api).
+2023-05-19 19:39:03.439 +05:00 [INF] Entity Framework Core 6.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2023-05-19 19:39:03.909 +05:00 [INF] Executed DbCommand (467ms) [Parameters=[@__loginUserModel_UserName_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[Username]
+FROM [users] AS [u]
+WHERE [u].[Username] = @__loginUserModel_UserName_0
+2023-05-19 19:39:03.910 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-05-19 19:39:03.911 +05:00 [INF] Executed action Identity.Api.Controllers.AccountsController.Login (Identity.Api) in 618.8196ms
+2023-05-19 19:39:03.911 +05:00 [INF] Executed endpoint 'Identity.Api.Controllers.AccountsController.Login (Identity.Api)'
+2023-05-19 19:39:03.911 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7037/api/Accounts/login application/json 50 - 200 - text/plain;+charset=utf-8 619.6713ms
+2023-05-19 19:39:09.844 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:39:09.844 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:39:09.844 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:39:09.845 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 1.1532ms
+2023-05-19 19:39:12.716 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:39:12.716 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:39:12.717 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:39:12.717 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 1.3550ms
+2023-05-19 19:39:12.921 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:39:12.922 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:39:12.922 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:39:12.923 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 1.8699ms
+2023-05-19 19:39:13.152 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7037/api/Accounts/profile - -
+2023-05-19 19:39:13.153 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-05-19 19:39:13.153 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-05-19 19:39:13.154 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7037/api/Accounts/profile - - - 401 0 - 1.3364ms
